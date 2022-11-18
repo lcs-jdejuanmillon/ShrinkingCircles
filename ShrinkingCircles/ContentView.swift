@@ -10,6 +10,12 @@ import SwiftUI
 struct ShrinkingCircles: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
+        
+        path.addEllipse(in: CGRect(origin: CGPoint(x: (rect.width - 2 / 3 * rect.height) / 2, y: rect.height / 6), size: CGSize(width: 2 / 3 * rect.height, height: 2 / 3 * rect.height)))
+        path.addEllipse(in: CGRect(origin: CGPoint(x: rect.width / 2 - 4 / 9 * rect.height, y: rect.height / 2 - 1 / 9 * rect.height), size: CGSize(width: 2 / 9 * rect.height, height: 2 / 9 * rect.height)))
+        path.addEllipse(in: CGRect(origin: CGPoint(x: rect.width / 2 - 1 / 9 * rect.height, y: 1 / 18 * rect.height), size: CGSize(width: 2 / 9 * rect.height, height: 2 / 9 * rect.height)))
+        path.addEllipse(in: CGRect(origin: CGPoint(x: rect.width / 2 + 2 / 9 * rect.height, y: rect.height / 2 - 1 / 9 * rect.height), size: CGSize(width: 2 / 9 * rect.height, height: 2 / 9 * rect.height)))
+        path.addEllipse(in: CGRect(origin: CGPoint(x: rect.width / 2 - 1 / 9 * rect.height, y: 13 / 18 * rect.height), size: CGSize(width: 2 / 9 * rect.height, height: 2 / 9 * rect.height)))
         return path
     }
 }
@@ -17,6 +23,7 @@ struct ShrinkingCircles: Shape {
 struct ContentView: View {
     var body: some View {
         ShrinkingCircles()
+            .stroke()
     }
 }
 
