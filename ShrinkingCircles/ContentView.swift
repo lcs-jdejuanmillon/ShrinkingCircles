@@ -24,14 +24,15 @@ struct ShrinkingCirclesRecursively: Shape {
     
     func path(in rect: CGRect) -> Path {
         var path = Path()
-        let allThePaths = recursiveHelper(currentDepth: 1)
+        let allThePaths = recursiveHelper(currentDepth: 1, drawingIn: rect)
         path.addPath(allThePaths)
         return path
     }
     
-    func recursiveHelper(currentDepth: Int) -> Path {
+    func recursiveHelper(currentDepth: Int, drawingIn rect: CGRect) -> Path {
         var path = Path()
-        
+        let j = CGFloat(currentDepth - 1)
+        path.addEllipse(in: CGRect(origin: CGPoint(x: rect.midX - rect.midY + 25 * j, y: 25 * j), size: CGSize(width: rect.height - 50 * j, height: rect.height - 50 * j)))
         return path
     }
 }
