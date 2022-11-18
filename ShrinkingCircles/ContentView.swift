@@ -10,7 +10,7 @@ import SwiftUI
 struct ShrinkingCircles: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
-        for i in 0...8 {
+        for i in 0...3 {
             let j = Double(i)
             path.addEllipse(in: CGRect(origin: CGPoint(x: (rect.width - rect.height) / 2 + 25 * j, y: 25 * j), size: CGSize(width: rect.height - 50 * j, height: rect.height - 50 * j)))
         }
@@ -33,6 +33,10 @@ struct ShrinkingCirclesRecursively: Shape {
         var path = Path()
         let j = CGFloat(currentDepth - 1)
         path.addEllipse(in: CGRect(origin: CGPoint(x: rect.midX - rect.midY + 25 * j, y: 25 * j), size: CGSize(width: rect.height - 50 * j, height: rect.height - 50 * j)))
+        if currentDepth < desiredDepth {
+            let pathForNextCircle = recursiveHelper(currentDepth: currentDepth + 1, drawingIn: rect)
+            path.addPath(pathForNextCircle)
+        }
         return path
     }
 }
@@ -43,6 +47,7 @@ struct ContentView: View {
             ShrinkingCircles()
                 .stroke()
             ShrinkingCirclesRecursively(desiredDepth: 4)
+                .stroke()
         }
     }
 }
