@@ -10,12 +10,10 @@ import SwiftUI
 struct ShrinkingCircles: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
-        
-        path.addEllipse(in: CGRect(origin: CGPoint(x: (rect.width - 2 / 3 * rect.height) / 2, y: rect.height / 6), size: CGSize(width: 2 / 3 * rect.height, height: 2 / 3 * rect.height)))
-        path.addEllipse(in: CGRect(origin: CGPoint(x: rect.width / 2 - 4 / 9 * rect.height, y: rect.height / 2 - 1 / 9 * rect.height), size: CGSize(width: 2 / 9 * rect.height, height: 2 / 9 * rect.height)))
-        path.addEllipse(in: CGRect(origin: CGPoint(x: rect.width / 2 - 1 / 9 * rect.height, y: 1 / 18 * rect.height), size: CGSize(width: 2 / 9 * rect.height, height: 2 / 9 * rect.height)))
-        path.addEllipse(in: CGRect(origin: CGPoint(x: rect.width / 2 + 2 / 9 * rect.height, y: rect.height / 2 - 1 / 9 * rect.height), size: CGSize(width: 2 / 9 * rect.height, height: 2 / 9 * rect.height)))
-        path.addEllipse(in: CGRect(origin: CGPoint(x: rect.width / 2 - 1 / 9 * rect.height, y: 13 / 18 * rect.height), size: CGSize(width: 2 / 9 * rect.height, height: 2 / 9 * rect.height)))
+        for i in 0...8 {
+            let j = Double(i)
+            path.addEllipse(in: CGRect(origin: CGPoint(x: (rect.width - rect.height) / 2 + 25 * j, y: 25 * j), size: CGSize(width: rect.height - 50 * j, height: rect.height - 50 * j)))
+        }
         return path
     }
 }

@@ -11,6 +11,7 @@
 		0D3E08422928123700EDBE40 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3E08412928123700EDBE40 /* ContentView.swift */; };
 		0D3E08442928123900EDBE40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D3E08432928123900EDBE40 /* Assets.xcassets */; };
 		0D3E08472928123900EDBE40 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D3E08462928123900EDBE40 /* Preview Assets.xcassets */; };
+		0D3E084F29281C1B00EDBE40 /* RecursivePatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3E084E29281C1B00EDBE40 /* RecursivePatternView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		0D3E08432928123900EDBE40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D3E08462928123900EDBE40 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0D3E08482928123900EDBE40 /* ShrinkingCircles.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShrinkingCircles.entitlements; sourceTree = "<group>"; };
+		0D3E084E29281C1B00EDBE40 /* RecursivePatternView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursivePatternView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				0D3E083F2928123700EDBE40 /* ShrinkingCirclesApp.swift */,
 				0D3E08412928123700EDBE40 /* ContentView.swift */,
+				0D3E084E29281C1B00EDBE40 /* RecursivePatternView.swift */,
 				0D3E08432928123900EDBE40 /* Assets.xcassets */,
 				0D3E08482928123900EDBE40 /* ShrinkingCircles.entitlements */,
 				0D3E08452928123900EDBE40 /* Preview Content */,
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D3E08422928123700EDBE40 /* ContentView.swift in Sources */,
+				0D3E084F29281C1B00EDBE40 /* RecursivePatternView.swift in Sources */,
 				0D3E08402928123700EDBE40 /* ShrinkingCirclesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
